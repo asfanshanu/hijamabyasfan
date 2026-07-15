@@ -9,7 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { AlertCircle, Lock, Eye, EyeOff, ShieldCheck } from "lucide-react";
-import { supabase } from "@/lib/supabase/client";
+import { createClient } from "@/lib/supabase/client";
+import { hasSupabaseConfig } from "@/lib/supabase/config";
 import { getErrorMessage } from "@/lib/utils";
 
 const loginSchema = z.object({
@@ -29,7 +30,7 @@ export default function AdminLogin() {
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
-  const isDemoMode = supabaseUrl.includes("placeholder") || !supabaseUrl;
+  const isDemoMode = !hasSupabaseConfig || supabaseUrl.includes("placeholder");
 
   const {
     register,
@@ -56,6 +57,7 @@ export default function AdminLogin() {
         router.push("/admin");
         router.refresh();
       } else {
+        const supabase = createClient();
         const { error } = await supabase.auth.signInWithPassword({
           email: data.email,
           password: data.password,

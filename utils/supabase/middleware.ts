@@ -1,8 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { type NextRequest, NextResponse } from "next/server";
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+import { getSupabaseConfig, hasSupabaseConfig } from "@/lib/supabase/config";
 
 export const createClient = (request: NextRequest) => {
   // Create an unmodified response
@@ -12,9 +10,15 @@ export const createClient = (request: NextRequest) => {
     },
   });
 
+  if (!hasSupabaseConfig) {
+    return supabaseResponse;
+  }
+
+  const { supabaseUrl, supabaseKey } = getSupabaseConfig();
+
   void createServerClient(
-    supabaseUrl!,
-    supabaseKey!,
+    supabaseUrl,
+    supabaseKey,
     {
       cookies: {
         getAll() {
@@ -33,5 +37,5 @@ export const createClient = (request: NextRequest) => {
     },
   );
 
-  return supabaseResponse
+  return supabaseResponse;
 };
