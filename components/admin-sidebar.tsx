@@ -13,7 +13,8 @@ import {
   LogOut,
   User
 } from "lucide-react";
-import { supabase } from "@/lib/supabase/client";
+import { createClient } from "@/lib/supabase/client";
+import { hasSupabaseConfig } from "@/lib/supabase/config";
 
 export default function AdminSidebar() {
   const pathname = usePathname();
@@ -38,7 +39,13 @@ export default function AdminSidebar() {
       return;
     }
 
-    const { error } = await supabase.auth.signOut();
+    if (!hasSupabaseConfig) {
+      router.push("/admin/login");
+      router.refresh();
+      return;
+    }
+
+    const { error } = await createClient().auth.signOut();
     if (error) {
       console.error("Sign out error:", error.message);
     }
