@@ -1,0 +1,237 @@
+{
+  "availability_slots": [
+    {
+      "id": "mock-slot-1",
+      "appointment_date": "2026-07-15",
+      "start_time": "17:00:00",
+      "end_time": "18:00:00",
+      "status": "available"
+    },
+    {
+      "id": "mock-slot-2",
+      "appointment_date": "2026-07-15",
+      "start_time": "18:00:00",
+      "end_time": "19:00:00",
+      "status": "available"
+    },
+    {
+      "id": "mock-slot-3",
+      "appointment_date": "2026-07-15",
+      "start_time": "19:00:00",
+      "end_time": "20:00:00",
+      "status": "booked"
+    },
+    {
+      "id": "mock-slot-4",
+      "appointment_date": "2026-07-16",
+      "start_time": "10:00:00",
+      "end_time": "11:00:00",
+      "status": "available"
+    },
+    {
+      "id": "slot-t8a2ncpvj",
+      "appointment_date": "2026-07-12",
+      "start_time": "06:00:00",
+      "end_time": "08:00:00",
+      "status": "booked"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "mock-appt-1",
+      "full_name": "Rahul Kumar",
+      "phone_number": "9876543210",
+      "age": 28,
+      "appointment_slot_id": "mock-slot-3",
+      "session_note": "Relief for shoulder stiffness",
+      "status": "confirmed",
+      "admin_note": "",
+      "created_at": "2026-07-12T00:00:00.000Z"
+    },
+    {
+      "id": "appt-1m1erx3l0",
+      "full_name": "asfan ",
+      "phone_number": "9916507612",
+      "age": 20,
+      "appointment_slot_id": "slot-t8a2ncpvj",
+      "session_note": "diokxaoijsdcipasdjcpoacsjipco",
+      "status": "confirmed",
+      "admin_note": "",
+      "created_at": "2026-07-12T06:03:20.724Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "General Cupping Session",
+      "description": "An appointment-based cupping session with an initial conversation, session preparation, and aftercare guidance.",
+      "cta_label": "View Availability",
+      "display_order": 1,
+      "is_active": true
+    },
+    {
+      "id": "2",
+      "title": "Selected Day Cupping Sessions",
+      "description": "Cupping appointments available on selected scheduled days, subject to availability.",
+      "cta_label": "Check Available Slots",
+      "display_order": 2,
+      "is_active": true
+    },
+    {
+      "id": "3",
+      "title": "Pre-Session Enquiry",
+      "description": "Have questions before booking? Contact Asfan to understand the session process and booking requirements.",
+      "cta_label": "Ask a Question",
+      "display_order": 3,
+      "is_active": false
+    },
+    {
+      "id": "4",
+      "title": "Fire Cupping",
+      "description": "Traditional therapy utilizing glass cups and localized heat to create vacuum suction, promoting deep muscle relaxation and blood circulation.",
+      "cta_label": "View Availability",
+      "display_order": 4,
+      "is_active": true
+    },
+    {
+      "id": "5",
+      "title": "Dry Cupping",
+      "description": "A therapeutic procedure using mechanical suction pumps without incisions, targeting muscle tension and tissue release.",
+      "cta_label": "View Availability",
+      "display_order": 5,
+      "is_active": true
+    },
+    {
+      "id": "6",
+      "title": "Wet Cupping (Hijama)",
+      "description": "The traditional therapeutic practice involving controlled surface scratches to draw out stale blood and promote body detoxification.",
+      "cta_label": "View Availability",
+      "display_order": 6,
+      "is_active": true
+    },
+    {
+      "id": "7",
+      "title": "Water Cupping",
+      "description": "Specialized cupping where glass cups are filled one-third with warm water before application, offering a unique soothing effect.",
+      "cta_label": "View Availability",
+      "display_order": 7,
+      "is_active": true
+    },
+    {
+      "id": "8",
+      "title": "Ice Cupping",
+      "description": "A refreshing application using chilled cups or ice blocks inside cups to reduce acute muscle soreness and inflammation.",
+      "cta_label": "View Availability",
+      "display_order": 8,
+      "is_active": true
+    },
+    {
+      "id": "9",
+      "title": "Treatment-Based Cupping",
+      "description": "Customized therapy sessions designed specifically to address chronic back discomfort, headaches, or physical recovery.",
+      "cta_label": "View Availability",
+      "display_order": 9,
+      "is_active": true
+    }
+  ],
+  "faqs": [
+    {
+      "id": "1",
+      "question": "What is cupping?",
+      "answer": "Cupping is a traditional practice where specialized cups are placed on specific parts of the skin. Using suction, the cups pull the skin and superficial muscle layers slightly upward, promoting localized blood circulation and releasing tension in the muscle tissues.",
+      "display_order": 1,
+      "is_active": true
+    },
+    {
+      "id": "2",
+      "question": "How do I book an appointment?",
+      "answer": "You can book directly on this website. Simply scroll to the 'Availability' section, select an available date on the calendar, choose your preferred time slot, fill out the booking form, and click submit. You do not need to create an account to book.",
+      "display_order": 2,
+      "is_active": true
+    },
+    {
+      "id": "3",
+      "question": "Is an appointment required?",
+      "answer": "Yes. To ensure a calm environment, proper hygiene preparation, and personal attention, all sessions are strictly appointment-based. Walk-ins are not accommodated.",
+      "display_order": 3,
+      "is_active": true
+    },
+    {
+      "id": "4",
+      "question": "How long does a session usually take?",
+      "answer": "A standard session takes approximately 45 to 60 minutes. This includes a brief pre-session conversation, preparation of the clean room, the cupping placement, and aftercare guidance.",
+      "display_order": 4,
+      "is_active": true
+    },
+    {
+      "id": "5",
+      "question": "What should I do before my appointment?",
+      "answer": "It is recommended to have a light meal 2–3 hours before your session (avoid cupping on a completely full or empty stomach), stay hydrated, wear comfortable clothing, and take a shower as you will need to keep the cupping area dry for a period after the session.",
+      "display_order": 5,
+      "is_active": true
+    },
+    {
+      "id": "6",
+      "question": "What should I do after the session?",
+      "answer": "Keep the cupping area covered, warm, and away from cold drafts. Drink plenty of warm water. Avoid strenuous workouts, swimming, cold baths, and caffeine or alcohol for 24 hours to let your skin and body rest.",
+      "display_order": 6,
+      "is_active": true
+    },
+    {
+      "id": "7",
+      "question": "Who should speak with a qualified healthcare professional before considering cupping?",
+      "answer": "Individuals with severe cardiovascular disease, bleeding disorders, deep vein thrombosis, open skin wounds/infections, pregnant women, and patients on blood-thinning medications should consult their physician before scheduling cupping.",
+      "display_order": 7,
+      "is_active": true
+    },
+    {
+      "id": "8",
+      "question": "Can I ask questions before booking?",
+      "answer": "Absolutely. Feel free to use the WhatsApp, Call, or Email buttons in the Contact section to reach out directly. I am happy to address any questions you have regarding the procedure.",
+      "display_order": 8,
+      "is_active": true
+    },
+    {
+      "id": "9",
+      "question": "Where are sessions conducted?",
+      "answer": "Sessions are conducted in a private, clean, and prepared wellness room. The exact location details and directions are provided upon appointment confirmation.",
+      "display_order": 9,
+      "is_active": true
+    },
+    {
+      "id": "10",
+      "question": "How can I contact Asfan?",
+      "answer": "You can reach me directly via WhatsApp, direct phone call, or email. All corresponding contact numbers and addresses are listed in the 'Contact' section of this page.",
+      "display_order": 10,
+      "is_active": true
+    }
+  ],
+  "certifications": [
+    {
+      "id": "1",
+      "certificate_name": "Diploma in Cupping Therapy",
+      "issuing_organisation": "National Board of Vocational Training Education",
+      "certification_year": 2024,
+      "certificate_image_url": "/asfan_certificate.png",
+      "is_active": true
+    }
+  ],
+  "site_settings": [
+    {
+      "key": "phone",
+      "value": "+91 9916507612"
+    },
+    {
+      "key": "whatsapp",
+      "value": "+91 9916507612"
+    },
+    {
+      "key": "email",
+      "value": "asfanshanu06@gmail.com"
+    },
+    {
+      "key": "location",
+      "value": "Shirur, Karnataka, India"
+    }
+  ]
+}
